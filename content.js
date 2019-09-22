@@ -1,13 +1,15 @@
 console.log('hello')
-let images = Array.from(document.getElementsByTagName('img'))
+
+let images
 let memes = []
 async function getMemes(){
+    images = Array.from(document.getElementsByTagName('img'))
     let res = await fetch(' https://meme-api.herokuapp.com/gimme/100')
     let data = await res.json()
     await data.memes.forEach(el => memes.push(el.url))
+    console.log('i ran')
     showMemes()
 }
-getMemes()
 
 async function showMemes(){
     for(let i = 0; i < images.length; i++){
@@ -15,3 +17,6 @@ async function showMemes(){
     }
 }
 
+getMemes()
+
+setInterval(getMemes, 5000)
