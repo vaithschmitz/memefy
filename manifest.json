@@ -2,6 +2,9 @@
     "name": "memefy",
     "version": "1.0",
     "description": "Turn your frown upside down.",
+    "icons": {
+      "128": "memefy_icon16.png"
+    },
     "background": {
         "scripts": ["background.js"],
         "persistent": false
