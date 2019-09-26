@@ -2,17 +2,63 @@
 <html>
   <head>
     <style>
-      button {
-        height: 100px;
-        width: 100px;
-        outline: none;
-        background-color: red
+      body{
+        height: 200px;
+        width: 200px;
+        background:linear-gradient(150deg, #ff4787 0%,#4787ff 30%,#ffbf47 65%,#ff6347 100% );
       }
+      #popup-container{
+        height: 100%;
+        width: 100%;
+        grid-template-rows: 2fr 1fr 1fr ;
+        grid-template-areas: 'a' 'b' 'c' 
+      }
+      #memeToggle {
+        height: 100px;
+        width: 200px;
+        grid-area: a;
+        border-radius: 5px;
+        outline: none;
+        font-size: 20px;
+        color: white;
+      }
+      #descrip{
+        grid-area: b;
+        text-align: center;
+        font-size: 10px;
+      }
+
+      i{
+        color: blue
+      }
+
+      #coffee{
+        grid-area: c;
+        height: 50px;
+        position: relative;
+        top: 20px;
+        display: flex;
+        align-items: center;
+        background-color: orange;
+        color: white;
+        border-radius: 5px;
+        font-size: 15px;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      #coffee-img{
+        float: left;
+        height: 40px;
+      }
+
     </style>
   </head>
   <body>
+    <div id='popup-container'>
     <button id="memeToggle">memefy page</button>
-    <div>Toggle button and reload page to see changes.</div>
+    <div id='descrip'>Toggle button and reload page for <i>dankalicious</i> memes.</div>
+    <a id='coffee' href="https://www.buymeacoffee.com/gWHldyPcY"><img id='coffee-img' src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/BMC-btn-logo.svg" alt="Buy me a coffee">Love memefy? <br/>Buy me a coffee!</a>
+  </div>
     <script src="popup.js"></script>
   </body>
 </html>

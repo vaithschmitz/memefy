@@ -7,7 +7,6 @@ chrome.storage.local.get('enabled', data => {
             let res = await fetch(' https://meme-api.herokuapp.com/gimme/30')
             let data = await res.json()
             await data.memes.forEach(el => memes.push(el.url))
-            console.log('i ran')
             showMemes()
         }
         
