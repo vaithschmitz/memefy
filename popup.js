@@ -21,4 +21,8 @@ myButton.onclick = () => {
     chrome.storage.local.set({enabled:enabled});
 };
 
-   
+function openCoffee(){
+    chrome.tabs.create( { url: "https://www.buymeacoffee.com/gWHldyPcY"} )
+}
+
+document.getElementById('coffee').addEventListener('click', openCoffee)

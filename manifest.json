@@ -1,6 +1,6 @@
 {
     "name": "memefy",
-    "version": "1.0",
+    "version": "1.0.2",
     "description": "Turn your frown upside down.",
     "icons": {
       "128": "128.png"
@@ -17,7 +17,7 @@
             "js": ["content.js"]
         }
     ],
-    "permissions": ["activeTab", "declarativeContent","storage"],
+    "permissions": ["activeTab", "declarativeContent","storage", "tabs"],
     "page_action": {
         "default_popup": "popup.html"
       },  
